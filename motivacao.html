@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frases Motivacionais</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+    #frase {
+      font-size: 1.8rem;
+      margin: 30px 0;
+      max-width: 600px;
+      line-height: 1.4;
+      font-style: italic;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    button {
+      background: #ff4081;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(255,64,129,0.5);
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #e73370;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Frases Motivacionais</h1>
+  <div id="frase">Clique no botão para receber uma frase inspiradora!</div>
+  <button onclick="novaFrase()">Gerar Frase</button>
+
+  <script>
+    const frases = [
+      "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
+      "Acredite em si mesmo e todo o resto virá naturalmente.",
+      "Não espere por oportunidades, crie-as.",
+      "A única limitação que você tem é aquela que você aceita.",
+      "Coragem não é ausência de medo, é agir apesar do medo.",
+      "Transforme seus sonhos em metas, e suas metas em realidade.",
+      "Você é capaz de coisas incríveis quando acredita em si mesmo.",
+      "O único lugar onde sucesso vem antes do trabalho é no dicionário.",
+      "A persistência é o caminho do êxito.",
+      "Seja a mudança que você quer ver no mundo."
+    ];
+
+    function novaFrase() {
+      const indice = Math.floor(Math.random() * frases.length);
+      document.getElementById('frase').textContent = frases[indice];
+    }
+  </script>
+
+</body>
+</html>
